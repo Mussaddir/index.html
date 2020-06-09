@@ -28,7 +28,7 @@ jobs:
     - name: Install SURGE
       run: npm i -g surge
     - name: Upload site
-      run: surge ./ http://mussaddirbootcamp2020piaic.surge.sh/ --token ${{secrets.SURGE_TOKKEN}}
+      run: surge ./ http://mussaddirbootcamp2020piaic.surge.sh/ --token 9c9783918d69608185daf96f3c5296ad
        
        
         
