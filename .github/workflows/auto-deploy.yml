@@ -20,17 +20,15 @@ jobs:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
 
-    # Runs a single command using the runners shell
-    - name: installing node
-      uses: action/setup-node@v2-beta
-      with:
-        node-version: 12                                                       
-
-    # Runs a set of commands using the runners shell
-    - name: installing surge
-      run: npm intall --global surge
-    - name: deploying step
-      run: surge/. Mussaddir-Ali.surge.sh --token ${{ secrets.surgeToken }}
+   # Runs a single command using the runners shell
+    - name: Install NODE
+      uses: actions/setup-node@v2-beta
+      with: 
+        node-version: 12
+    - name: Install SURGE
+      run: npm i -g surge
+    - name: Upload site
+      run: surge ./ http://mussaddirbootcamp2020piaic.surge.sh/ --token ${{secrets.SURGE_TOKKEN}}
        
        
         
