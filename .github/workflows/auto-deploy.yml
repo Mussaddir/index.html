@@ -34,3 +34,17 @@ jobs:
       run: surge/. Mussaddir-Ali.surge.sh --token ${{ secrets.surgeToken }}
 =======
  
+  # Runs a single command using the runners shell
+    - name: Install NODE
+      uses: actions/setup-node@v2-beta
+      with: 
+        node-version: 12
+    - name: Install SURGE
+      run: npm i -g surge
+    - name: Upload site
+      run: surge ./ http://mussaddirbootcamp2020piaic.surge.sh/ --token 9c9783918d69608185daf96f3c5296ad
+>>>>>>> 32bfa85af975ff5e6fc71e6ca3a1af75398ecef6
+       
+       
+        
+        
